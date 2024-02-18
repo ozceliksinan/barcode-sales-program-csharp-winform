@@ -113,6 +113,13 @@ Barcoded sales program is a software that allows businesses such as markets, gro
 </configuration>
 ```
 
+## License Duration Calculation
+You can adjust the license period with Excel located in the project root folder.
+
+## Login Information
+* Username: sinan
+* Password: sinan
+
 ## <img src="https://user-images.githubusercontent.com/74038190/235294019-40007353-6219-4ec5-b661-b3c35136dd0b.gif" width="30" style="margin-bottom: -5px;"> Contact Information
 
 You can reach out to me using the following contact details:
