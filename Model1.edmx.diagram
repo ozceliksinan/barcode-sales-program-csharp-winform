@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="86e05c8f522244779f3fd6488c5a0a16" Name="Diagram1">
+        <EntityTypeShape EntityType="BarcodeSalesDbModel.HizliUrun" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarcodeSalesDbModel.Islem" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarcodeSalesDbModel.IslemOzet" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarcodeSalesDbModel.Satis" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarcodeSalesDbModel.Terazi" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarcodeSalesDbModel.Urun" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarcodeSalesDbModel.UrunGrup" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BarcodeSalesDbModel.Barkod" Width="1.5" PointX="7.375" PointY="3.75" />
+        <EntityTypeShape EntityType="BarcodeSalesDbModel.StokHareket" Width="1.5" PointX="7.375" PointY="6.75" />
+        <EntityTypeShape EntityType="BarcodeSalesDbModel.Sabit" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="BarcodeSalesDbModel.Kullanici" Width="1.5" PointX="3.375" PointY="8.75" />
+        <EntityTypeShape EntityType="BarcodeSalesDbModel.Guvenlik" Width="1.5" PointX="9.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

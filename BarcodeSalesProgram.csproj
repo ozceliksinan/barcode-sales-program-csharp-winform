@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC4A458B-CE20-4004-ACEF-7C96FD9173C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BarcodeSalesProgram</RootNamespace>
+    <AssemblyName>BarcodeSalesProgram</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\BarcodeSales\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\BarcodeSales\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1586.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1586.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Barkod.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fAyarlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAyarlar.Designer.cs">
+      <DependentUpon>fAyarlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fBaslangic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBaslangic.Designer.cs">
+      <DependentUpon>fBaslangic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDetayGoster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDetayGoster.Designer.cs">
+      <DependentUpon>fDetayGoster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fFiyatGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fFiyatGuncelle.Designer.cs">
+      <DependentUpon>fFiyatGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fGelirGider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fGelirGider.Designer.cs">
+      <DependentUpon>fGelirGider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHizliButonUrunEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHizliButonUrunEkle.Designer.cs">
+      <DependentUpon>fHizliButonUrunEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLisans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLisans.Designer.cs">
+      <DependentUpon>fLisans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fNakitKart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNakitKart.Designer.cs">
+      <DependentUpon>fNakitKart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRapor.Designer.cs">
+      <DependentUpon>fRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRaporGoster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRaporGoster.Designer.cs">
+      <DependentUpon>fRaporGoster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSatis.Designer.cs">
+      <DependentUpon>fSatis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fStok.Designer.cs">
+      <DependentUpon>fStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fUrunGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fUrunGiris.Designer.cs">
+      <DependentUpon>fUrunGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fUrunGrubuEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fUrunGrubuEkle.Designer.cs">
+      <DependentUpon>fUrunGrubuEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fYedek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fYedek.Designer.cs">
+      <DependentUpon>fYedek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guvenlik.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HizliUrun.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Islem.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Islemler.cs" />
+    <Compile Include="IslemOzet.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kontrol.cs" />
+    <Compile Include="Kullanici.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lic.cs" />
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raporlar.cs" />
+    <Compile Include="Sabit.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Satis.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="StokHareket.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Terazi.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Urun.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UrunGrup.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Yazdir.cs" />
+    <EmbeddedResource Include="fAyarlar.resx">
+      <DependentUpon>fAyarlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBaslangic.resx">
+      <DependentUpon>fBaslangic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDetayGoster.resx">
+      <DependentUpon>fDetayGoster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fFiyatGuncelle.resx">
+      <DependentUpon>fFiyatGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fGelirGider.resx">
+      <DependentUpon>fGelirGider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHizliButonUrunEkle.resx">
+      <DependentUpon>fHizliButonUrunEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLisans.resx">
+      <DependentUpon>fLisans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.agq.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNakitKart.resx">
+      <DependentUpon>fNakitKart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRapor.resx">
+      <DependentUpon>fRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRaporGoster.resx">
+      <DependentUpon>fRaporGoster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSatis.resx">
+      <DependentUpon>fSatis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fStok.resx">
+      <DependentUpon>fStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fUrunGiris.resx">
+      <DependentUpon>fUrunGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fUrunGrubuEkle.resx">
+      <DependentUpon>fUrunGrubuEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fYedek.resx">
+      <DependentUpon>fYedek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="rpGenelRapor.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpStokIzleme.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpStokUrun.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\IslemOzet.datasource" />
+    <None Include="Properties\DataSources\StokHareket.datasource" />
+    <None Include="Properties\DataSources\Urun.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BarcodeSalesDb.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BarcodeSalesDb_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>BarcodeSalesDb.mdf</DependentUpon>
+    </Content>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\tl4854.png" />
+    <None Include="Resources\rapor48541.png" />
+    <None Include="Resources\stok4854.png" />
+    <None Include="Resources\urungiris4854.png" />
+    <None Include="Resources\settings4854.png" />
+    <None Include="Resources\fiyatguncelletl4854.png" />
+    <None Include="Resources\backup4854.png" />
+    <None Include="Resources\shuffle.png" />
+    <None Include="Resources\exit4854.png" />
+    <None Include="Resources\Ekle20.png" />
+    <None Include="Resources\save241.png" />
+    <None Include="Resources\clear48481.png" />
+    <None Include="Resources\backup48541.png" />
+    <None Include="Resources\restore4854.png" />
+    <None Include="Resources\enter-arrow.png" />
+    <None Include="Resources\enter.png" />
+    <None Include="Resources\enter %281%29.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\result.png" />
+    <None Include="Resources\report %281%29.png" />
+    <None Include="Resources\report.png" />
+    <None Include="Resources\rapor4854.png" />
+    <None Include="Resources\Ara32.png" />
+    <None Include="Resources\ara3232.png" />
+    <None Include="Resources\clear4848.png" />
+    <None Include="Resources\cancel241.png" />
+    <None Include="Resources\Ekle321.png" />
+    <None Include="Resources\Excel32.png" />
+    <None Include="Resources\excel4854.png" />
+    <None Include="Resources\save24.png" />
+    <None Include="Resources\cancel24.png" />
+    <None Include="Resources\barcode4832.png" />
+    <None Include="Resources\Ekle32.png" />
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\kartnakit.png" />
+    <None Include="Resources\kredikarti.png" />
+    <None Include="Resources\tl_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 ve x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 </ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
